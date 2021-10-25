@@ -24,7 +24,7 @@ public class CharUtil {
 //
 //        for (int i = 0; i < bolola.length; i++) {
 //
-//            if (bolola[4] == 'l' & bolola[5] == 'y') {
+//            if (bolola[bolola.lenght -1] == 'l' && bolola[bolola.lent - 2] == 'y') {
 //
 //                System.out.println("true");
 //            } else {
@@ -35,37 +35,56 @@ public class CharUtil {
 //        System.out.println("false");
 //
 //        char[] bolola = {'b', 'o', 'l', 'o', 'l', 'a'};
-//        int lo = bolola[1];
-//        for (int i = 2; i < bolola.length - 2; i++) {
-//            if (bolola[i] > lo) {
+//        System.out.print(bolola[bolola.length / 2 - 1]);
+//        System.out.println(bolola[bolola.length / 2]);
+
 //
-//            }
-//            System.out.println(bolola[i]);
-//        }
 //        char[] babola = {'b', 'a', 'b', 'o', 'l', 'a'};
-//        int bob = 0;
-//        for (int i = 0; i < babola.length - 2; i++) {
-//            if (bob > i + 2) {
+//        boolean isbob = false;
+//        for (int i = 0; i < babola.length -2; i++) {
+//            if (babola[i] == 'b' && babola[i + 2] == 'b') {
+//                isbob = true;
 //
-//
-//            } else {
 //            }
-//
-//        }System.out.println("true");
+//        }System.out.println(isbob);
+
         char[] text = {' ', ' ', 'b', 'a', 'r', 'e', 'v', ' ', ' '};
 
-        char[] result = new char[text.length];
-        for (int i = 0; i < text.length; i++)
-            if (text[i] == ' ') {
-                text[i] =text [i + 1];
-                for (int j = 0; j < result.length; j++) {
-                    if (result[i] == 'b') {
-                        j = j + 1;
+        int startindex = 0;
 
-                    }
-                }
+        int endindex = text.length - 1;
 
-                System.out.println(result[i]);
-            }
+        while (startindex < endindex && startindex == ' ') {
+            startindex++;
+        }
+        while (startindex < endindex && endindex == ' ') {
+            endindex--;
+        }
+        char[] result = new char[(endindex - startindex) + 1];
+
+        int index = 0;
+        for (int i = startindex; i <= endindex; i++) {
+            result[index++] = text[i];
+
+        }
+        for (int i = 0; i < result.length; i++) {
+            System.out.print(result[i]);
+
+        }
+
+
+//        char[] result = new char[text.length];
+//        for (int i = 0; i < text.length; i++)
+//            if (text[i] == ' ') {
+//                text[i] = text[i + 1];
+//                for (int j = 0; j < result.length; j++) {
+//                    if (result[i] == 'b') {
+//                        j = j + 1;
+
     }
 }
+
+//                System.out.println(result[i]);
+//                        }
+
+
