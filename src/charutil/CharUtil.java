@@ -72,19 +72,6 @@ public class CharUtil {
 
         }
 
-
-//        char[] result = new char[text.length];
-//        for (int i = 0; i < text.length; i++)
-//            if (text[i] == ' ') {
-//                text[i] = text[i + 1];
-//                for (int j = 0; j < result.length; j++) {
-//                    if (result[i] == 'b') {
-//                        j = j + 1;
-
     }
 }
-
-//                System.out.println(result[i]);
-//                        }
-
 
