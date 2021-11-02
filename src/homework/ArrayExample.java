@@ -1,4 +1,4 @@
-package com.company;
+package homework;
 
 public class ArrayExample {
 
