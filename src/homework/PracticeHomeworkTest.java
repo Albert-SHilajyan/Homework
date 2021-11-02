@@ -12,5 +12,6 @@ public class PracticeHomeworkTest {
          int [] array ={10,15,12,14,19,15,14,13,25};
          int [] array1 ={1,2,23,5,8,4,8,4541,51,55,5,11,51};
         System.out.println(test.maxLength(array, array1) );
+        System.out.println(test.reverseBool(array1.length > array.length));
     }
 }

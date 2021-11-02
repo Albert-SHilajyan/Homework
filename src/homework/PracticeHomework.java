@@ -48,7 +48,17 @@ public class PracticeHomework {
             max = array1.length;
 
         }
-        System.out.print("max = " );
+        System.out.print("max = ");
         return max;
+    }
+
+    boolean reverseBool(boolean value) {
+        boolean b;
+        if (value == true) {
+            b = false;
+        } else {
+            b = true;
+        }
+        return b;
     }
 }
