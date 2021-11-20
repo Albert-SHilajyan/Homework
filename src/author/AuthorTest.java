@@ -15,7 +15,8 @@ public class AuthorTest {
         private static final String PRINT_AUTHORS = "4";
         private static final String ADD_BOOK = "5";
         private static final String SEARCH_BOOKS_BY_TITLE = "6";
-        private static final String PRINT_BOOKS = "7";
+        private static final String SEARCH_BOOKS_BY_DISCRIPTION = "7";
+        private static final String PRINT_BOOKS = "8";
 
         public static void main(String[] args) {
 
@@ -46,6 +47,9 @@ public class AuthorTest {
                     case SEARCH_BOOKS_BY_TITLE:
                         searchByTitle();
                         break;
+                    case SEARCH_BOOKS_BY_DISCRIPTION:
+                        searchByDiscription();
+                        break;
                     case PRINT_BOOKS:
                         bookStorage.print();
                     default:
@@ -56,6 +60,12 @@ public class AuthorTest {
 
 
         }
+
+    private static void searchByDiscription() {
+            System.out.println("please input keyword2");
+        String keyword2 = scanner.nextLine();
+        bookStorage.searchByDiscrition(keyword2);
+    }
 
     private static void searchByTitle() {
             System.out.println("please input keyword1");

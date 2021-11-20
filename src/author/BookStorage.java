@@ -27,12 +27,21 @@ public class BookStorage {
 
         }
     }
+
     public void searchByTitle(String keyword1) {
         for (int i = 0; i < size; i++) {
-            if (books[i].getTitle().contains(keyword1) ) {
+            if (books[i].getTitle().contains(keyword1)) {
                 System.out.println(books[i]);
             }
 
+        }
+    }
+
+    public void searchByDiscrition(String keyword2) {
+        for (int i = 0; i < size; i++) {
+            if (books[i].getDiscription().contains(keyword2)) {
+                System.out.println(books[i]);
+            }
         }
     }
 }
