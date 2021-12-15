@@ -1,12 +1,12 @@
 package homework.education.model;
 
 import java.util.Date;
+import homework.education.util.DateUtil;
+import java.util.Arrays;
+import java.util.Date;
 
 public class Student {
 
- import homework.education.util.DateUtil;
-import java.util.Arrays;
-import java.util.Date;
 
 
         private String name;
