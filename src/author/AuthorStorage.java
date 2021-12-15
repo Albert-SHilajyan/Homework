@@ -9,9 +9,8 @@ public class AuthorStorage {
         if (authors.length == size) {
             extend();
         }
+
         authors[size++] = author;
-
-
     }
 
     private void extend() {
@@ -45,5 +44,16 @@ public class AuthorStorage {
             }
 
         }
+    }
+
+    public Author getByEmail(String email) {
+        for (int i = 0; i < size; i++) {
+            if (authors[i].getEmail().equals(email)) {
+                return authors[i];
+
+            }
+
+        }
+        return null;
     }
 }

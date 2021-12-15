@@ -2,11 +2,12 @@ package author;
 
 public class BookStorage {
 
-    private Book[] books = new Book[23];
-    private int size;
+
+    private Book[] books = new Book[10];
+    private int size = 0;
 
     public void add(Book book) {
-        if (books.length == size) {
+        if (size == books.length) {
             extend();
         }
         books[size++] = book;
@@ -27,6 +28,15 @@ public class BookStorage {
 
         }
     }
+    public Book getBySerialId(String serialId){
+        for (int i = 0; i < size; i++) {
+            if (books[i].getSerialId().equals(serialId)) {
+            return books[i];
+            }
+
+        }
+return null;
+    }
 
     public void searchByTitle(String keyword1) {
         for (int i = 0; i < size; i++) {
@@ -43,5 +53,24 @@ public class BookStorage {
                 System.out.println(books[i]);
             }
         }
+    }
+
+    public void searchByAuthor(Author author) {
+        for (int i = 0; i < size; i++) {
+            if (books[i].getAuthor().equals(author)) {
+                System.out.println(books[i]);
+            }
+
+        }
+    }
+
+    public void countByAuthor(Author author) {
+        int count= 0;
+        for (int i = 0; i < size; i++) {
+            if (books[i].getAuthor().equals(author)) {
+count ++;
+            }
+        }
+        System.out.println("count of" + author.getEmail()+"author's book is" + count);
     }
 }
