@@ -40,7 +40,7 @@ public class StudentLessonTest implements StudentLessonCommands {
                     login();
                     break;
                 case UserCommands.REGISTER:
-                    userRegister();
+                    register();
                     break;
                 case UserCommands.PRINT_USER:
                     userStorage.print();
@@ -51,13 +51,14 @@ public class StudentLessonTest implements StudentLessonCommands {
         }
     }
 
-    private static void userRegister() {
+
+    public static void register() {
         System.out.println("Please input user's email");
         String email = scanner.nextLine();
         try {
             userStorage.getByEmail(email);
             System.out.println("invalid user,try again");
-            userRegister();
+            register();
         } catch (UserNotFoundException e) {
             System.out.println("Please input user's name");
             String name = scanner.nextLine();
@@ -211,7 +212,8 @@ public class StudentLessonTest implements StudentLessonCommands {
             System.out.println("Please choose lesson's name");
             return;
         }
-        Lesson[] lessons = new Lesson[lessonArray.length];
+        Lesson[] lessons;
+        lessons = new Lesson[lessonArray.length];
         int index = 0;
         for (String lesson : lessonArray) {
             Lesson lessonName = lessonStorage.getByLessonName(lesson);
@@ -275,11 +277,11 @@ public class StudentLessonTest implements StudentLessonCommands {
         String name = scanner.nextLine();
         System.out.println("please input lesson's duration");
         String duration = scanner.nextLine();
-        System.out.println("please input lesson's lecturar name");
-        String lecturarName = scanner.nextLine();
+        System.out.println("please input lesson's lecturer name");
+        String lecturerName = scanner.nextLine();
         System.out.println("please input lesson's price");
         int price = Integer.parseInt(scanner.nextLine());
-        Lesson lesson = new Lesson(name, duration, lecturarName, price);
+        Lesson lesson = new Lesson(name, duration, lecturerName, price);
         lessonStorage.addLesson(lesson);
         System.out.println("Thank you, lesson was added");
 
