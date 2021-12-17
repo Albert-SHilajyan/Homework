@@ -94,7 +94,7 @@ public class StudentLessonTest implements StudentLessonCommands {
                 }
             } else {
                 System.out.println("Your email is " + email);
-                System.out.println("\033[0;31m" + "\n" + "Forget password" + "\u001B[0m");
+                System.out.println("Forget password" );
                 System.out.println("Please choose user's name");
                 String name = scanner.nextLine();
                 if (!user.getName().equals(name)) {
@@ -240,7 +240,7 @@ public class StudentLessonTest implements StudentLessonCommands {
             int age = Integer.parseInt(scanner.nextLine());
             System.out.println("please input student's phone");
             String phone = scanner.nextLine();
-            System.out.println("please input student's date of birth[12/12/2021]");
+            System.out.println("please input student's date of birth[31/12/2000]");
             String dateStr = scanner.nextLine();
             Date date = DateUtil.stringToDate(dateStr);
 
@@ -249,7 +249,7 @@ public class StudentLessonTest implements StudentLessonCommands {
             String lessonNameStr = scanner.nextLine();
             String[] lessonName = lessonNameStr.split(",");
             if (lessonName.length == 0) {
-                System.out.println("please choose lessons's name");
+                System.out.println("please choose lesson's name");
                 return;
             }
             Lesson[] lessons = new Lesson[lessonName.length];
@@ -273,13 +273,13 @@ public class StudentLessonTest implements StudentLessonCommands {
     }
 
     private static void addLesson() {
-        System.out.println("please input lesson's name");
+        System.out.println("please input lesson name");
         String name = scanner.nextLine();
-        System.out.println("please input lesson's duration");
+        System.out.println("please input lesson duration");
         String duration = scanner.nextLine();
-        System.out.println("please input lesson's lecturer name");
+        System.out.println("please input lesson lecturer name");
         String lecturerName = scanner.nextLine();
-        System.out.println("please input lesson's price");
+        System.out.println("please input lesson price");
         int price = Integer.parseInt(scanner.nextLine());
         Lesson lesson = new Lesson(name, duration, lecturerName, price);
         lessonStorage.addLesson(lesson);

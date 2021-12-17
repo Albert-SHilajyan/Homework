@@ -10,10 +10,10 @@ package homework.education;
 
 
     static void printCommands1() {
-        System.out.println("\u001B[34m" + "Please input " + EXIT + " for exit");
+        System.out.println("Please input " + EXIT + " for exit");
         System.out.println("Please input " + LOGIN + " for user's login");
         System.out.println("Please input " + REGISTER + " for register");
-        System.out.println("Please input " + PRINT_USER + " for print user" + "\u001B[0m");
+        System.out.println("Please input " + PRINT_USER + " for print user");
     }
 
 }
