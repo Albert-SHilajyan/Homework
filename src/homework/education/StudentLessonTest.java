@@ -24,7 +24,7 @@ public class StudentLessonTest implements StudentLessonCommands {
 
     public static void main(String[] args) throws ParseException {
         User user = new User("Poxos", "Poxosyan", "poxos@mail.ru", "poxos", "user");
-        User user1 = new User("Poxosuhi", "Poxosyan", "poxosuhi@mail.ru", "poxosuhi", "admin");
+        User user1 = new User("Sanduxt", "Esiminjyan", "sanduxt@mail.ru", "forester", "admin");
         userStorage.addUser(user);
         userStorage.addUser(user1);
 
